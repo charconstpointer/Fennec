@@ -1,0 +1,21 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{BF57D9B5-E98F-40F5-A502-DD657417A331}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fennec.Core", "Fennec.Core\Fennec.Core.csproj", "{D25414D6-517F-4A47-B288-EC86FE81D587}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D25414D6-517F-4A47-B288-EC86FE81D587} = {BF57D9B5-E98F-40F5-A502-DD657417A331}
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D25414D6-517F-4A47-B288-EC86FE81D587}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D25414D6-517F-4A47-B288-EC86FE81D587}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D25414D6-517F-4A47-B288-EC86FE81D587}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D25414D6-517F-4A47-B288-EC86FE81D587}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

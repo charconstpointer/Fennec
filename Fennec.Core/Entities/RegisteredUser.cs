@@ -27,7 +27,7 @@ namespace Fennec.Core.Entities
             return registeredUser;
         }
 
-        private static void ValidateUserData(string ipAddress, string username, string email, string password)
+        protected static void ValidateUserData(string ipAddress, string username, string email, string password)
         {
             if (string.IsNullOrEmpty(username))
             {

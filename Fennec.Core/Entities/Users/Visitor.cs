@@ -1,4 +1,4 @@
-﻿namespace Fennec.Core.Entities
+﻿namespace Fennec.Core.Entities.Users
 {
     public class Visitor
     {

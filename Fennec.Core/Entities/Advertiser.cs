@@ -1,4 +1,5 @@
 ﻿using System;
+using Fennec.Core.Entities.Users;
 
 namespace Fennec.Core.Entities
 {

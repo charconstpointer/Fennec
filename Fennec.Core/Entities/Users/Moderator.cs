@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Fennec.Core.Entities
+namespace Fennec.Core.Entities.Users
 {
     public class Moderator : RegisteredUser
     {

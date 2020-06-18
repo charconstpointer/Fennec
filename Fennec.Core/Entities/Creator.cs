@@ -1,4 +1,5 @@
-﻿using Fennec.Core.ValueObjects;
+﻿using Fennec.Core.Entities.Users;
+using Fennec.Core.ValueObjects;
 
 namespace Fennec.Core.Entities
 {

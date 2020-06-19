@@ -15,7 +15,7 @@ namespace Fennec.Infrastructure.Mongo.Repositories
 
         public ArticlesRepository(IMongoClient client)
         {
-            _articles = client.GetDatabase("Fennec").GetCollection<ArticleDocument>("articles");
+            _articles = client.GetDatabase("Fennec2").GetCollection<ArticleDocument>("articles");
         }
 
         public async Task<Article> Find(Guid id)

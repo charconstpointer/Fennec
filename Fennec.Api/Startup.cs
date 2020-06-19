@@ -35,6 +35,7 @@ namespace Fennec.Api
         {
             services.AddSingleton<IMongoClient, MongoClient>();
             services.AddTransient<IArticlesRepository, ArticlesRepository>();
+            services.AddTransient<IUsersRepository, UsersRepository>();
             services.AddMediatR(typeof(CreateNewArticle).Assembly);
             services.AddAuthentication(x =>
                 {

@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace Fennec.Api.Controllers
 {
     [ApiController]
-    [Authorize]
+    // [Authorize]
     [Route("[controller]")]
     public class ContentsController : ControllerBase
     {

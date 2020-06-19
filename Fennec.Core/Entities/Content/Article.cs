@@ -19,30 +19,29 @@ namespace Fennec.Core.Entities.Content
 
         private Article(Guid id, string title, string description, string body, Category category, ContentState state,
             bool isAdvertisementEnabled = false, bool isDeleted = false,
-            ICollection<string> tags = null,
-            ICollection<Advertisement> advertisements = null, ISet<Comment> comments = null) : base(id, title,
+            ISet<string> tags = null,
+            ISet<Advertisement> advertisements = null, ISet<Comment> comments = null) : base(id, title,
             description, category, state,
             isAdvertisementEnabled, isDeleted)
         {
-            _tags = tags;
-            _advertisements = advertisements;
+            _tags = tags ?? new HashSet<string>();
+            _advertisements = advertisements ?? new HashSet<Advertisement>();
             Body = body;
             _comments = comments ?? new HashSet<Comment>();
         }
 
         public static Article Create(Guid id, string title, string description, string body, Category category,
             ContentState state,
-            bool isAdvertisementEnabled = false, bool isDeleted = false, ICollection<string> tags = null,
-            ICollection<Advertisement> advertisements = null)
+            bool isAdvertisementEnabled = false, bool isDeleted = false, ISet<string> tags = null,
+            ISet<Advertisement> advertisements = null, ISet<Comment> comments = null)
         {
             ValidateInputs(title, description);
 
             var article = new Article(id, title, description, body, category, state, isAdvertisementEnabled, isDeleted,
-                tags,
-                advertisements);
+                tags, advertisements, comments);
             return article;
         }
-        
+
         private static void ValidateInputs(params string[] parameters)
         {
             foreach (var parameter in parameters)
@@ -83,10 +82,12 @@ namespace Fennec.Core.Entities.Content
             {
                 throw new ApplicationException("Comment must have an author");
             }
+
             if (_comments.Contains(comment))
             {
                 return;
             }
+
             _comments.Add(comment);
             var author = comment.Author;
             comment.Content = this;

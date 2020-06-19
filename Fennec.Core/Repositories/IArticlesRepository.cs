@@ -6,9 +6,10 @@ using Fennec.Core.Entities.Content;
 
 namespace Fennec.Core.Repositories
 {
-    public interface IContentsRepository
+    public interface IArticlesRepository
     {
-        Task<IEnumerable<Content>> Find(Expression<Func<Article, bool>> predicate);
+        Task<Article> Find(Guid id);
+        Task<IEnumerable<Article>> Find();
         Task Save(Article article);
     }
 }

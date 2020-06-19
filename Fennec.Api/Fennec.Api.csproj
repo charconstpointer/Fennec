@@ -11,6 +11,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\Fennec.Application\Fennec.Application.csproj" />
+      <ProjectReference Include="..\Fennec.Infrastructure\Fennec.Infrastructure.csproj" />
     </ItemGroup>
 
 

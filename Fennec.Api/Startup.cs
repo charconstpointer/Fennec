@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Fennec.Application.Commands.Content;
+using Fennec.Core.Repositories;
+using Fennec.Infrastructure.Mongo.Repositories;
 using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -29,6 +31,7 @@ namespace Fennec.Api
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddSingleton<IMongoClient, MongoClient>();
+            services.AddTransient<IArticlesRepository, ArticlesRepository>();
             services.AddMediatR(typeof(CreateNewArticle).Assembly);
             services.AddControllers();
         }

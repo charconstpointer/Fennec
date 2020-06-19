@@ -8,7 +8,7 @@ namespace Fennec.Infrastructure.Mongo.Extensions
     public static class UserDocumentExtensions
     {
         public static RegisteredUser AsEntity(this UserDocument userDocument)
-            => RegisteredUser.Create(userDocument.Id, "", userDocument.Username, userDocument.Email,
+            => RegisteredUser.Create(userDocument.Id, "321321", userDocument.Username, userDocument.Email,
                 userDocument.Password, userDocument.Comments.AsEntity(userDocument).ToHashSet());
 
         public static IEnumerable<RegisteredUser> AsEntity(this IEnumerable<UserDocument> userDocuments)

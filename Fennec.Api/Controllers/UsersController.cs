@@ -1,5 +1,6 @@
 ﻿using System.Threading.Tasks;
 using Fennec.Application.Commands.Users;
+using Fennec.Application.Queries.Users;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -20,9 +21,13 @@ namespace Fennec.Api.Controllers
         public async Task<IActionResult> CreateUser(CreateUser createUser)
         {
             return Created("", await _mediator.Send(createUser));
-            
         }
 
+        [HttpGet]
+        public async Task<IActionResult> GetUsers()
+        {
+            return Ok(await _mediator.Send(new GetAllUsers()));
+        }
         #region ...
 
         // [HttpPost("moderators")]

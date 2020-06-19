@@ -26,7 +26,8 @@ namespace Fennec.Infrastructure.Mongo.Repositories
 
         public async Task<IEnumerable<RegisteredUser>> Find()
         {
-            throw new NotImplementedException();
+            var documents = await _users.Find(_=> true).ToListAsync();
+            return documents.AsEntity();
         }
 
         public async Task Save(RegisteredUser t)

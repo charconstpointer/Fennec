@@ -12,6 +12,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fennec.Api", "Fennec.Api\Fe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fennec.Infrastructure", "Fennec.Infrastructure\Fennec.Infrastructure.csproj", "{619D236E-5117-4B80-B586-4A36439D5FAF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fennec.Application", "Fennec.Application\Fennec.Application.csproj", "{5D7E7FD0-0DA9-4C2C-82B6-3F8D225945A1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -22,6 +24,7 @@ Global
 		{9DA58881-0153-4EFE-8D4E-0D734139019C} = {D0EB64E1-3F24-45D1-AA3E-6924C42BE20A}
 		{93E3DC08-C69B-455B-8A1A-173744668D81} = {BF57D9B5-E98F-40F5-A502-DD657417A331}
 		{619D236E-5117-4B80-B586-4A36439D5FAF} = {BF57D9B5-E98F-40F5-A502-DD657417A331}
+		{5D7E7FD0-0DA9-4C2C-82B6-3F8D225945A1} = {BF57D9B5-E98F-40F5-A502-DD657417A331}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{D25414D6-517F-4A47-B288-EC86FE81D587}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -40,5 +43,9 @@ Global
 		{619D236E-5117-4B80-B586-4A36439D5FAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{619D236E-5117-4B80-B586-4A36439D5FAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{619D236E-5117-4B80-B586-4A36439D5FAF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D7E7FD0-0DA9-4C2C-82B6-3F8D225945A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D7E7FD0-0DA9-4C2C-82B6-3F8D225945A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D7E7FD0-0DA9-4C2C-82B6-3F8D225945A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D7E7FD0-0DA9-4C2C-82B6-3F8D225945A1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

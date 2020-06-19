@@ -4,10 +4,10 @@ namespace Fennec.Core.Entities
 {
     public class Category : IEntity
     {
-        public Category(string name)
+        public Category(Guid id, string name)
         {
+            Id = id;
             Name = name;
-            Id = Guid.NewGuid();
         }
 
         public Guid Id { get; }

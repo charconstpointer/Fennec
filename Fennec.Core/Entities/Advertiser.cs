@@ -5,7 +5,7 @@ namespace Fennec.Core.Entities
 {
     public class Advertiser : RegisteredUser
     {
-        protected Advertiser(string ipAddress, string email, string password, string username) : base(ipAddress, email,
+        protected Advertiser(Guid id, string ipAddress, string email, string password, string username) : base(id, ipAddress, email,
             password, username)
         {
             IsVerified = false;
@@ -13,10 +13,10 @@ namespace Fennec.Core.Entities
 
         public bool IsVerified { get; private set; }
         
-        public new static Advertiser Create(string ipAddress, string username, string email, string password)
+        public static Advertiser Create(Guid id,string ipAddress, string username, string email, string password)
         {
             ValidateUserData(ipAddress, username, email, password);
-            var advertiser = new Advertiser(ipAddress, email, password, username);
+            var advertiser = new Advertiser(id, ipAddress, email, password, username);
             return advertiser;
         }
     }

@@ -2,11 +2,13 @@
 using Fennec.Application.Commands.Content;
 using Fennec.Application.Queries.Content;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Fennec.Api.Controllers
 {
     [ApiController]
+    [Authorize]
     [Route("[controller]")]
     public class ContentsController : ControllerBase
     {
